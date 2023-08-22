@@ -4,6 +4,7 @@ import cookieParser from "cookie-parser";
 import { connectDB } from './data/database.js';
 import { checkPassword, isRegistered, saveUserAccount } from './controllers/register.js';
 import userRouter from './routes/user.js';
+import { getUserAccount } from './controllers/login.js';
 
 connectDB;
 
@@ -30,3 +31,4 @@ app.get("/login_registration", (req, res)=>{
 
 app.post("/register", checkPassword, isRegistered, saveUserAccount);
 
+app.post("/login", getUserAccount);
