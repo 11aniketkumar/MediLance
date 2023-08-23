@@ -1,5 +1,15 @@
 import { doctor, patient, user } from '../models/user.js';
 
+export const checkPassword = (req, res, next)=>{
+    const{ password, c_password } = req.body;
+
+    if(password === c_password) {
+        next();
+    } else {
+        res.send("password mismatch!");
+    }
+}
+
 export const isRegistered = async(req, res, next)=>{
     const{ email } = req.body;
     const data = await user.findOne({ email });
@@ -8,16 +18,6 @@ export const isRegistered = async(req, res, next)=>{
         res.send("user already exists in database");
     } else {
         next();
-    }
-}
-
-export const checkPassword = (req, res, next)=>{
-    const{ password, c_password } = req.body;
-
-    if(password === c_password) {
-        next();
-    } else {
-        res.send("password mismatch!");
     }
 }
 

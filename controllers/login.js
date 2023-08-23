@@ -1,6 +1,5 @@
 import { user } from "../models/user.js";
 
-
 export const getUserAccount = async(req,res)=>{
     const { email, password } = req.body;
 
