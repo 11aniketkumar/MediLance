@@ -6,7 +6,18 @@ export const getUserAccount = async(req,res)=>{
     const data = await user.findOne({ email, password });
     
     if(data) {
-        res.send("success");
+        const userId = data._id.toString();
+
+        res.cookie("token", userId, {
+            httpOnly: true,
+            expires: new Date(Date.now() + 7*24*60*60*1000)
+        });
+
+        if(data.role === "doctor") {
+            res.redirect("/doctor/home");
+        } else {
+            res.redirect("/");
+        }
     } else {
         res.send("Invalid Input");
     }

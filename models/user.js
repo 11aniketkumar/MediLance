@@ -6,7 +6,7 @@ const userSchema = mongoose.Schema({
         unique: true
     },
     password: String,
-    post: String,
+    role: String,
     details: mongoose.Schema.Types.ObjectId
 });
 

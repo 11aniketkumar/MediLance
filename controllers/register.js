@@ -22,10 +22,10 @@ export const isRegistered = async(req, res, next)=>{
 }
 
 export const saveUserAccount = async(req,res)=>{
-    const {name, email, phone, dob, password, c_password, post} = req.body;
+    const {name, email, phone, dob, password, c_password, role} = req.body;
     let id = 5;
 
-    if(post === "doctor") {
+    if(role === "doctor") {
         id = await doctor.create({
             name,
             phone,
@@ -42,9 +42,9 @@ export const saveUserAccount = async(req,res)=>{
     user.create({
         email,
         password,
-        post,
+        role,
         details: id
     });
 
-    res.send("done");
+    res.redirect("/login_registration");
 }
