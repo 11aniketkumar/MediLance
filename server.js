@@ -5,6 +5,7 @@ import { connectDB } from './data/database.js';
 import { checkPassword, isRegistered, saveUserAccount } from './controllers/register.js';
 import userRouter from './routes/user.js';
 import doctorRouter from './routes/doctor.js';
+import patientRouter from './routes/patient.js';
 import { getUserAccount } from './controllers/login.js';
 
 import http from 'http';
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended : true }));
 app.use(cookieParser());
 app.use(userRouter);
 app.use("/doctor",doctorRouter);
+app.use("/patient",patientRouter);
 
 server.listen(5000, () => {
     console.log('Server is running on port 5000');

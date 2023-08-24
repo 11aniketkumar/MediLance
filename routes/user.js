@@ -8,4 +8,11 @@ router.get("/users", async(req,res)=>{
     res.json(data);
 });
 
+// router.get('/user/:userId', async (req, res) => {
+//     const userId = req.params.userId;
+
+//     const userDetails = await user.findById(userId);
+//     res.json(userDetails);
+// });
+
 export default router;

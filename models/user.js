@@ -3,17 +3,30 @@ import mongoose from 'mongoose';
 const userSchema = mongoose.Schema({
     email: {
         type: String,
-        unique: true
+        unique: true,
+        required: true
     },
-    password: String,
-    role: String,
-    details: mongoose.Schema.Types.ObjectId
+    password: {
+        type: String,
+        required: true
+    },
+    role: {
+        type: String,
+        required: true
+    },
+    details: {
+        type: mongoose.Schema.Types.ObjectId,
+        required: true
+    }
 });
 
 export const user = mongoose.model("User", userSchema);
 
 const patientSchema = mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        required: true
+    },
     phone: String,
     dob: Date,
     gender: {
@@ -37,7 +50,10 @@ const patientSchema = mongoose.Schema({
 export const patient = mongoose.model("Patient", patientSchema);
 
 const doctorSchema = mongoose.Schema({
-    name: String,
+    name: {
+        type: String,
+        required: true
+    },
     phone: String,
     dob: Date,
     gender: {

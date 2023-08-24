@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap');
+/* NAVIGATION BAR */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(25, 132, 231);
+}
+
+.navbar-logo{
+    background-color: rgb(25, 132, 231);
+    font-size: 18px;
+    font-weight: bold;
+    color: white; 
+    font-family: 'poppins', 'sans-serif';
+}
+.navbar ul{
+    display: flex;
+    background-color: rgb(25, 132, 231);
+    padding-left: 800px;
+}
+.navbar ul li{
+    list-style: none;
+    margin-top: 1px;
+    margin-bottom: 13px;
+    margin-left: 25px;
+}
+.navbar ul li:hover{
+    text-decoration: underline;
+    color:#fffe;
+}
+
+.navbar a{
+    text-decoration: none;
+    font-family: 'poppins', 'sans-serif';
+    color: white;
+    padding-top: 34px;
+}
+
+.btn-sign-in{
+    width: 62px;
+    height:auto;
+    background-color: rgb(25, 132, 231);
+    border: 2px solid white;
+    border-radius: 34px;
+    text-decoration: none;
+}
+
+.btn-sign-in:hover{
+    background-color: #056bd8;
+}
+
+/* CONTENT */
+.content{
+    text-align: center;
+    padding: 164px;
+    color: white;
+    font-family: 'poppins', 'sans-serif';
+}
+
+.content-h1{
+    font-weight: 700;
+    font-size: 60px;
+}
+
+.btn-join-us{
+    width: 86px;
+    height: 36px;
+    color: white;
+    background-color: rgb(25, 132, 231);
+    border: 2px solid white;
+    border-radius: 34px;
+    text-decoration: none;
+}
+
+.btn-join-us:hover{
+    background-color: #056bd8;
+}
+

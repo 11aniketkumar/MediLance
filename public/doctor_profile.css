@@ -1,0 +1,151 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Separate CSS code in docinfo.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.inline{
+    display: flex;
+}
+
+.form {
+    margin-bottom: 20px;
+}
+
+.section {
+    padding: 20px;
+}
+
+.info-head {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #2867B2; /* LinkedIn Blue */
+}
+.content1 {
+    height: 400px;
+    width: 360px;
+    display: grid;
+    gap: 15px;
+}
+
+.content {
+    display: grid;
+    gap: 15px;
+}
+
+.input-box label {
+    font-weight: bold;
+    color: #333; /* Dark Text Color */
+}
+.boxx1{
+    margin-top: 72px;
+    margin-left: 69px;
+    height: 380px;
+    width: 280px;
+    background-color: rgb(216, 216, 216);
+    border-radius: 15px;
+
+}
+.boxx2{
+    margin-top: 10px;
+    margin-left: 25px;
+    margin-right: 40px;
+    height: 230px;
+    width: 250px;
+    background-color: rgb(216, 216, 216);
+}
+.boxx3{
+    margin-left: 40px;
+    height: 150px;
+    width: 150px;
+}
+
+.pic img{
+    border-radius: 50%;
+}
+
+.suggested-profile-image{
+    border-radius: 50%;
+}
+
+img{
+    margin-top: 10px;
+    padding-left: 10pxpx;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.but13{
+    height: 35px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.info{
+    margin-top: 15px;
+    padding-left: 10px;
+}
+.name{
+    font-weight: bold;
+}
+.title{
+    padding-left: 20px;
+}
+
+.input-box input,
+.input-box textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+    border-color: #2867B2; /* LinkedIn Blue */
+}
+
+.button {
+    text-align: right;
+}
+
+button,
+.submit {
+    padding: 10px 20px;
+    background-color: #2867B2; /* LinkedIn Blue */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover,
+.submit:hover {
+    background-color: #175285; /* Darker LinkedIn Blue */
+}
+
+/* Adjust the button alignment */
+.button button,
+.button .submit {
+    margin-right: 0;
+    margin-top: 0;
+}

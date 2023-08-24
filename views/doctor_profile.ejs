@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Info Page</title>
+    <link rel="stylesheet" href="/doctor_profile.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="inline">
+            <form action="" class="section">
+                <h2 class="info-head">Basic Info</h2>
+                <div class="content1">
+                    <div class="input-box">
+                        <label for="name">Name</label>
+                        <input type="text" placeholder="Enter your full name" name="name">
+                    </div>
+                    <div class="input-box">
+                        <label for="email">Email</label>
+                        <input type="email" placeholder="Enter your email" name="email">
+                    </div>
+                    <div class="input-box">
+                        <label for="phno">Phone Number</label>
+                        <input type="text" placeholder="Enter your phone number" name="phno">
+                    </div>
+                    <div class="input-box">
+                        <label for="address">Address</label>
+                        <textarea name="address" cols="30" rows="3" placeholder="Enter your address"></textarea>
+                    </div>
+                    <div class="input-box">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob">
+                    </div>
+                </div>
+            </form>
+            <div class="boxx1">
+                <div class="boxx2">
+                    <div class="boxx3">
+                        <div class="pic"><img src="/img/Formal-profile-pic.jpg" alt="Suggested Profile 1" class="suggested-profile-image"> </div>
+                        <div class="info">
+                            <div class="name">RISHABH KUMAR</div>
+                            <div class="title">Data Scientist</div>
+                        </div>
+                    </div>
+                </div>
+                <button class="but13">Book Appointment</button>
+                <button class="but13">Chat with doctor</button>
+            </div>
+        </div>
+
+        <form action="" class="section">
+            <h2 class="info-head">Professional Information</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="lno">License Number</label>
+                    <input type="text" placeholder="Medical license number" name="lno">
+                </div>
+                <div class="input-box">
+                    <label for="speciality">Speciality</label>
+                    <input type="text" placeholder="Medical speciality" name="speciality">
+                </div>
+                <div class="input-box">
+                    <label for="inst">Institute</label>
+                    <input type="text" placeholder="Institute affiliation" name="inst">
+                </div>
+                <div class="input-box">
+                    <label for="hname">Hospital Name</label>
+                    <input type="text" placeholder="Hospital name" name="hname">
+                </div>
+                <div class="input-box">
+                    <label for="ypractice">Practice Years</label>
+                    <input type="text" placeholder="Years of practice" name="ypractice">
+                </div>
+            </div>
+        </form><hr>
+
+        <form action="upload.pdf" method="post" enctype="multipart/form-data" class="section">
+            <h2 class="info-head">Credentials</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="file1">Copy of Medical License</label>
+                    <input type="file" id="file1" name="file1">
+                </div>
+                <div class="input-box">
+                    <label for="file2">Copy of Board Certification (optional)</label>
+                    <input type="file" id="file2" name="file2">
+                </div>
+                <div class="input-box">
+                    <label for="file3">Other Relevant Certifications or Credentials</label>
+                    <input type="file" id="file3" name="file3">
+                </div>
+                <div class="input-box">
+                    <label for="emergencyContact">Emergency Contact</label>
+                    <input type="text" placeholder="Enter emergency contact phone number" name="emergencyContact">
+                </div>
+                <div class="button">
+                    <input class="submit" type="submit" value="SUBMIT">
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <form action="/login_registration" method="get">
-        <button>Join Us</button>
-    </form>
+    <div class="container">
+        <nav class="navbar">
+            <a href="#" class="navbar-logo">MediLance</a>
+            <ul>
+                <li> <a href="#">HOME</a></li>
+                <li> <a href="#">ABOUT</a></li>
+                <li> <a href="#">SERVICES</a></li>
+                <li> <a href="#">TEAM</a></li>
+                <li> <a href="#">CONTACT</a></li>
+                <li> <a href="#">FAQ</a></li>
+                <form action="/login_registration" method="get">
+                    <li><button class="btn-sign-in">SIGN IN</button></li>
+                </form>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <h1 class="content-h1"> Shaping Medical Futures Together</h1><br>
+            <h2>Doctors with Expertise. Patients with Dreams. We Unite Them.</h2><br>
+            <form action="/login_registration" method="get">
+                <button class="btn-join-us"> JOIN US </button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

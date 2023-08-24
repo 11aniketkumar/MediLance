@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Info Page</title>
+    <link rel="stylesheet" href="/patient_profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+    <!-- Basic Info Section -->
+<form action="" class="form">
+    <h2 class="info-head">Basic Information</h2>
+    <div class="content">
+        <div class="input-box">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Enter your full name" name="name">
+        </div>
+        <div class="input-box">
+            <div class="contact-input">
+                <label for="Phno">Phone No.</label>
+                <input type="text" placeholder="Enter Your Phone No." name="Phno">
+            </div>
+            <div class="contact-input">
+                <label for="Email">Email</label>
+                <input type="email" placeholder="Enter Your E-Mail" name="Email">
+            </div>
+        </div>
+        <div class="input-box">
+            <label for="address">Address</label>
+            <textarea name="address" cols="60" rows="3" placeholder="Enter your address"></textarea>
+        </div>
+        <div class="input-box">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob">
+        </div>
+        <div class="button">
+            <button class="submit">Save</button>
+        </div>
+    </div>
+</form>
+
+        <!-- Medical Info Section -->
+        <form action="" class="form">
+            <h2 class="info-head">Medical Information</h2>
+            <div class="content">
+                <div class="input-box">
+                    <label for="file">Health Insurance</label>
+                    <input type="file" id="file" name="file">
+                </div>
+                <div class="input-box">
+                    <label for="meditation">Current Meditation</label>
+                    <input type="file" placeholder="Meditation" name="Meditation">
+                </div>
+                <div class="input-box">
+                    <label for="allergy">Allergy</label>
+                    <input type="file" placeholder="Allergy" name="allergy">
+                </div>
+            </div>
+        </form>
+
+        <!-- Emergency Info Section -->
+<form action="" class="form">
+    <h2 class="info-head">Emergency Contact</h2>
+    <div class="content">
+        <div class="input-box">
+            <label for="emergencyName">Name</label>
+            <input type="text" placeholder="Enter Emergency Contact Name" name="emergencyName">
+        </div>
+        <div class="input-box">
+            <label class="relation" for="relation">Relation</label>
+            <select name="relation" id="relation">
+                <option value="Parents">Parents</option>
+                <option value="Guardian">Guardians</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+        <div class="input-box">
+            <div class="emergency-contact-input">
+                <label for="emergencyPhno">Phone No.</label>
+                <input type="text" placeholder="Enter Emergency Contact Phone No." name="emergencyPhno">
+            </div>
+            <div class="emergency-contact-input">
+                <label for="emergencyEmail">Email</label>
+                <input type="email" placeholder="Enter Emergency Contact E-Mail" name="emergencyEmail">
+            </div>
+        </div>
+        <div class="input-box">
+            <label for="emergencyAddress">Address</label>
+            <textarea name="emergencyAddress" cols="60" rows="3" placeholder="Enter Emergency Contact Address"></textarea>
+        </div>
+        <div class="button">
+            <button class="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
+    </div>
+</body>
+
+</html>

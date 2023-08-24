@@ -16,7 +16,7 @@ export const getUserAccount = async(req,res)=>{
         if(data.role === "doctor") {
             res.redirect("/doctor/home");
         } else {
-            res.redirect("/");
+            res.redirect("/patient/home");
         }
     } else {
         res.send("Invalid Input");
