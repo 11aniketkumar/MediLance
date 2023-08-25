@@ -17,7 +17,7 @@
     <input type="text" placeholder="Search" class="navbar-search">
   </span>
   <span class="nav-right">
-      <a href="/">Home</a>
+      <a href="/patient/home">Home</a>
       <a href="#">Doctors</a>
       <a href="/">Appointments</a>
       <a href="/">Messaging</a>
@@ -27,7 +27,7 @@
 </div>
 <div id="container">
   <div class="profile-card">
-    <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
+    <img src="/img/user.png" alt="Profile Picture" class="profile-image">
     <div class="profile-info">
         <form action="/doctor/profile" method="get">
           <div class="profile-name"><input type="submit" value=<%=name%>></div>
@@ -65,14 +65,16 @@
               const postElement = document.createElement('div');
               postElement.classList.add('post');
               postElement.innerHTML = `<div class="post-header">
-                  <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="post-profile-image">
+                  <img src="/img/doctor.png" alt="Profile Picture" class="post-profile-image">
                   <div class="post-author">
                     <span class="post-author-name">${post.details.name}</span>
                     <span class="post-author-title">${post.email}</span>
                   </div>
                 </div>
                 <div class="post-actions">
+                <form action="/addAppointment" method="get">
                   <button class="post-like">Book Appointment</button>
+                </form>
                   <button class="post-comment">Contact</button>
                 </div>
               `;

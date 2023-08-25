@@ -1,0 +1,200 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap');
+
+
+body {
+    position: relative; /* Add this to create a stacking context */
+    background-color: #3586ff;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+
+.navbar {
+    background-color: #3586ff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 0 20px;
+    font-weight: 600; /* Increase font weight */
+}
+
+.logo {
+    font-size: 24px;
+    color: white;
+    font-weight: 600;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #e5e5e5;
+}
+
+/* Adding the underline on hover */
+.nav-links a:not(.sign-in-btn):hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    bottom: -3px;
+    left: 0;
+}
+
+.sign-in-btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 70px);
+}
+
+.content {
+    text-align: center;
+    margin-top: -40px; /* Adjust this value as needed */
+}
+
+h1 {
+    margin-top: 0px;
+    font-weight: 700;
+    font-size: 60px;
+    color: white;
+    margin-bottom: 5px; /* Decrease margin to bring h1 and h4 closer */
+}
+
+h4 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 15px; /* Decrease margin to bring h1 and h4 closer */
+    line-height: 1.6;
+    font-weight: 1100;
+}
+
+.join-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.join-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes move_wave {
+    0% {
+        transform: translateX(0) translateZ(0) scaleY(1)
+    }
+    50% {
+        transform: translateX(-25%) translateZ(0) scaleY(0.55)
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0) scaleY(1)
+    }
+}
+.waveWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the wave animation to the background */
+    pointer-events: none; /* Allow interactions with content */
+}
+
+.content-container {
+    position: relative; /* Create a stacking context */
+    z-index: 1; /* Ensure the content is above the wave animation */
+    overflow: hidden; /* Hide overflow from wave animation */
+}
+
+.waveWrapperInner {
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    height: 100%;
+    bottom: -1px;
+    background-image: linear-gradient(to top, #0e1ce0 20%, #3586ff 80%);
+}
+.bgTop {
+    z-index: 15;
+    opacity: 0.5;
+}
+.bgMiddle {
+    z-index: 10;
+    opacity: 0.75;
+}
+.bgBottom {
+    z-index: 5;
+}
+.wave {
+    position: absolute;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-repeat: repeat no-repeat;
+    background-position: 0 bottom;
+    transform-origin: center bottom;
+}
+.waveTop {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveTop {
+  animation: move-wave 3s;
+   -webkit-animation: move-wave 3s;
+   -webkit-animation-delay: 1s;
+   animation-delay: 1s;
+}
+.waveMiddle {
+    background-size: 50% 120px;
+}
+.waveAnimation .waveMiddle {
+    animation: move_wave 10s linear infinite;
+}
+.waveBottom {
+    background-size: 50% 100px;
+}
+.waveAnimation .waveBottom {
+    animation: move_wave 15s linear infinite;
+}

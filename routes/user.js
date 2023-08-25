@@ -16,6 +16,10 @@ router.get("/signout", (req, res)=>{
         expires: new Date(Date.now())
     });
     res.redirect("/");
-})
+});
+
+router.get("/addAppointment", (req,res)=>{
+    res.render("appointment.ejs");
+});
 
 export default router;

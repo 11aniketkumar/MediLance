@@ -15,3 +15,16 @@ export const savePatientPost = async(req,res)=>{
 
     res.redirect("/patient/home");
 };
+
+export const getAllPatientPosts = async (req, res) => {
+    const data = await patient_post.find()
+            .populate({
+                path: 'userId',
+                populate: {
+                    path: 'details',
+                    model: 'Patient'
+                    }
+            });
+
+    res.json(data);
+};

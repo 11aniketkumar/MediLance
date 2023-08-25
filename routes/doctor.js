@@ -3,6 +3,7 @@ import { getAllPosts, savePost } from "../controllers/post.js";
 import { user } from "../models/user.js";
 import { isLoggedIn } from "../controllers/login.js";
 import { getAllDoctors } from "../controllers/doctor.js";
+import { getAllPatientPosts } from "../controllers/patientPost.js";
 
 const router = express.Router();
 
@@ -18,6 +19,18 @@ router.get("/home", isLoggedIn, async(req,res)=>{
     res.render("doctor_home", { name, specilization:"doctor" });
 });
 
+router.get("/patient", isLoggedIn, async(req,res)=>{
+    const { token } = req.cookies;
+
+    const data = await user.findOne({ _id: token }).populate({
+                                                        path: 'details',
+                                                        model: 'Doctor'
+                                                        });
+    const name = data.details.name;
+
+    res.render("doctor_patient", { name, specilization:"doctor" });
+});
+
 router.get("/post", isLoggedIn, (req,res)=>{
     res.render("user_post");
 });
@@ -26,6 +39,9 @@ router.post("/addPost", isLoggedIn, savePost);
 
 // api used by home page
 router.get("/posts", getAllPosts);
+
+// api used by doctor_patient page
+router.get("/patient_posts", getAllPatientPosts);
 
 // api used by patient_doctor page
 router.get("/allDoctors", getAllDoctors);

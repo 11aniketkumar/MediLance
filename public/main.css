@@ -9,11 +9,13 @@ body{
     background-color: rgb(25, 132, 231);
 }
 
+
 .navbar-logo{
     background-color: rgb(25, 132, 231);
     font-size: 18px;
     font-weight: bold;
-    color: white; 
+    color: white;
+    padding: 34px;
     font-family: 'poppins', 'sans-serif';
 }
 .navbar ul{
@@ -68,8 +70,8 @@ body{
 .btn-join-us{
     width: 86px;
     height: 36px;
-    color: white;
-    background-color: rgb(25, 132, 231);
+    color: rgb(25, 132, 231);
+    background-color: white;
     border: 2px solid white;
     border-radius: 34px;
     text-decoration: none;
@@ -79,3 +81,5 @@ body{
     background-color: #056bd8;
 }
 
+
+/* FAQ PAGE */

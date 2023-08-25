@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="appointment.css">
+</head>
+<body>
+    <div class="appointment-box">
+        <div class="appointment">
+            <h1 class="appointment-heading"></h1>
+            <form action="/patient/patient_doctors" method="get">
+                <p >Which day would you prefer for appointment?<input type="date" name="appointment-date" id="appointment-date"></p>
+                <p> What time would you prefer for appointment?<input type="time" name="appointment-time" id="appointment-time"></p>
+                
+                <textarea name="post" placeholder="Mention your health problems."></textarea>
+                <button class="confirm-appointment-btn">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

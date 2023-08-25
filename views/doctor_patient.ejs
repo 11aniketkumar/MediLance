@@ -17,35 +17,25 @@
     <input type="text" placeholder="Search" class="navbar-search">
   </span>
   <span class="nav-right">
-    <a href="#">Home</a>
-    <a href="/patient/patient_doctors">Doctors</a>
-    <a href="/">Appointments</a>
-    <a href="/">Messaging</a>
-    <a href="/">Notifications</a>
-    <a href="/">Sign Out</a>
-</span>
+      <a href="/doctor/home">Home</a>
+      <a href="#">Patients</a>
+      <a href="/">Appointments</a>
+      <a href="/">Messaging</a>
+      <a href="/">Notifications</a>
+      <a href="/signout">Sign Out</a>
+  </span>
 </div>
 <div id="container">
   <div class="profile-card">
-    <img src="/img/user.png" alt="Profile Picture" class="profile-image">
+    <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
     <div class="profile-info">
-      <form action="/patient/profile" method="get">
-        <div class="profile-name"><input type="submit" value=<%=name%>></div>
-        <div class="profile-title"><%=specilization%></div>
-      </form>
+        <form action="/doctor/profile" method="get">
+          <div class="profile-name"><input type="submit" value=<%=name%>></div>
+          <div class="profile-title"><%=specilization%></div>
+        </form>
     </div>
   </div>
   <div id="centre-content">
-    <div id="create_post">
-      <div class="left">
-        <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
-      </div>
-      <div class="right">
-        <form action="/patient/post" method="get">
-          <input type="submit" value="Consult a doctor...">
-        </form>
-      </div>
-    </div>
     <div id="content"></div>
   </div>
   <div id="right-suggestion">
@@ -67,7 +57,7 @@
   const postsContainer = document.getElementById('content');
 
   // Fetch posts from the backend API
-  fetch('/doctor/posts')
+  fetch('/doctor/patient_posts')
       .then(response => response.json())
       .then(posts => {
           posts.forEach(post => {
@@ -75,7 +65,7 @@
               const postElement = document.createElement('div');
               postElement.classList.add('post');
               postElement.innerHTML = `<div class="post-header">
-                  <img src="/img/doctor.png" alt="Profile Picture" class="post-profile-image">
+                  <img src="/img/user.png" alt="Profile Picture" class="post-profile-image">
                   <div class="post-author">
                     <span class="post-author-name">${post.userId.details.name}</span>
                     <span class="post-author-title">${post.userId.email}</span>
@@ -83,9 +73,8 @@
                 </div>
                 <p class="post-content">${post.content}</p>
                 <div class="post-actions">
-                  <button class="post-like">Like</button>
-                  <button class="post-comment">Comment</button>
-                  <button class="post-share">Share</button>
+                  <button class="post-like">Set Appointment</button>
+                  <button class="post-comment">Contact Now</button>
                 </div>
               `;
               postsContainer.appendChild(postElement);
