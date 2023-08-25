@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Appointment Form</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="appointment.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/appointment.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap"
+    rel="stylesheet">
+  <title>Doc-fnt-pg</title>
 </head>
+
 <body>
-    <div class="appointment-box">
-        <div class="appointment">
-            <h1 class="appointment-heading"></h1>
-            <form action="/patient/patient_doctors" method="get">
-                <p >Which day would you prefer for appointment?<input type="date" name="appointment-date" id="appointment-date"></p>
-                <p> What time would you prefer for appointment?<input type="time" name="appointment-time" id="appointment-time"></p>
-                
-                <textarea name="post" placeholder="Mention your health problems."></textarea>
-                <button class="confirm-appointment-btn">Confirm Appointment</button>
-            </form>
-        </div>
+
+  <div class="navbar">
+    <span class="nav-left">
+      <a href="#" class="navbar-logo">MediLance</a>
+      <input type="text" placeholder="Search" class="navbar-search">
+    </span>
+    <span class="nav-right">
+      <ul>
+        <li>Home</li>
+        <li>Patients</li>
+        <li>Appointments</li>
+        <li>Messaging</li>
+        <li>Notifications</li>
+        <li>Sign Out</li>
+      </ul>
+    </span>
+  </div>
+  <div id="container">
+    <div class="appointment">
+      <h1 class="appointment-heading">Book Your Appointment</h1>
+      <div>Which day would you prefer for appointment?<div><input type="date" name="appointment-date"
+        id="appointment-date"></div></div>
+        <form action="patient/Patient_doctors" method="get">
+      <div> What time would you prefer for appointment?<div><input type="time" name="appointment-time"
+        id="appointment-time"></div></div>
+      <p>  Health Issues:
+        <textarea name="post" placeholder="What's causing you problem?"></textarea>
+      </p>
+      <button class="confirm-appointment-btn">Confirm Appointment</button>
+      </form>
     </div>
+  </div>
+      
+        
 </body>
+
 </html>

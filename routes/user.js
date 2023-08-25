@@ -19,7 +19,11 @@ router.get("/signout", (req, res)=>{
 });
 
 router.get("/addAppointment", (req,res)=>{
-    res.render("appointment.ejs");
+    res.render("appointment");
 });
+
+router.get("/chat", (req, res)=>{
+    res.render("chat");
+})
 
 export default router;

@@ -1,54 +1,468 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap');
-*{
-    font-family: 'poppins' , sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap');
+body {
+  margin: 0px;
+  font-family: 'poppins', sans-serif;
+  background-color: #ededed;
 }
 
-.appointment-heading{
-    text-align: center;
-    text-decoration: underline;
-}
-.appointment-box{
-    margin-left: 32%;
-    margin-top: 8%;
+.navbar {
+  background-color: #0077B5;
+  overflow: hidden;
+  padding: 10px 20px;
 }
 
-.appointment{
-    /* background-color: rgb(111, 159, 231); */
-    border: 2px solid black;
-    width: 23rem;
-    border-radius: 34px;
-    margin-left: 34px;
-    padding-left: 43px;
-    padding-right: 43px;
-    font-family: 'poppins' , sans-serif;
-    padding-bottom: 4px;
+.navbar-logo {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.navbar-logo:hover {
+  color: #E5E5E5;
+}
+
+.navbar-search {
+  border: none;
+  padding: 8px;
+  width: 60%;
+  border-radius: 10px;
+}
+
+.navbar-search:focus {
+  outline: none;
+}
+
+.navbar ul {
+  text-decoration: none;
+  display: flex;
+  list-style: none;
+  margin: 0px;
+}
+
+.navbar li {
+  color: white;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.navbar li:hover {
+  background-color: #005E91;
+  border-radius: 4px;
+}
+
+.nav-left{
+  float: left;
+  width: 40%;
+}
+
+.nav-right{
+  float: right;
+}
+
+/* .profile-image {
+  border-radius: 50%;
+} */
+
+
+#container {
+  width: 600px;
+  margin: 10px auto;
+  padding: 10px 0px;
+  padding-left: 30px;
+  background-color: white;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 6px 6px 10px -3px rgb(0, 0, 0,0.15);
+}
+
+h1{
+  padding-top: 10px;
+  font-family: 'poppins';
+  color:#005E91 ;
+
+}
+
+input[type=date],[type=time]{
+  height: 30px;
+  width: 58%;
+  margin: 5px;
+  margin-left: -3px;
+  margin-top: 12px;
+  margin-bottom: 22px;
+  border-radius: 15px;
+  border: none;
+  background-color: #ededed;
+}
+
+input[type=date], [type=time]::placeholder{
+  padding-left: 12px;
+}
+
+input[type=time]::placeholder{
+  padding-left: 12px;
 }
 
 p{
-    display: grid;
+  margin: 5px;
 }
-
+::placeholder{
+  padding-left: 12px;
+}
 textarea{
-    height: 230px;
-    width: 23rem;
-    padding-top: 5px;
-    resize: none;
-    border: transparent;
-    font-size: large;
-    background-color: white;
-    font-family: 'poppins' , sans-serif;
+  height: 160px;
+  width: 88%;
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 15px;
+  /* border: none; */
+  background-color: white;
+}
+button{
+  height: 35px;
+  width: 160px;
+  margin-top: 15px;
+ margin-left: 220px;
+ border-radius: 15px;
+ border: none ;
+ color: white;
+ background-color: #0077d5;
 }
 
-.confirm-appointment-btn{
-    background-color: rgb(82, 132, 219);
-    color: white;
-    width: auto;
-    height: 38px;
-    border: 2px solid white;
-    border-radius: 34px;
-    font-family: 'poppins' , sans-serif;
-    margin-left: 111px;
+button:hover{
+  background-color: #005a8c;
 }
-.confirm-appointment-btn:hover{
-    background-color: rgb(40, 43, 131);
+
+/* .profile-card {
+  align-items: center;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
+
+.profile-card img{
+  height: 150px;
+  width: 150px;
+}
+
+#centre-content{
+  width: 50%;
+  border-radius: 8px;
+  height: 100px;
+  margin: 10px;
+}
+
+#create_post {
+  display: flex;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  align-items: center; /* Align items vertically in the center */
+  /* margin-bottom: 20px; Adjust spacing
+}
+
+.right {
+  flex-grow: 1;
+  padding: 6px;
+}
+
+.left img {
+  height: 40px; Adjust the image height
+  width: 40px; Adjust the image width
+  border-radius: 50%;
+}
+
+.right input {
+  flex-grow: 1; Take up remaining space
+  padding: 8px;
+  font-size: 18px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+.right input:hover {
+  background-color: #005e9197;
+  color: white;
+  font-weight: bold;
+}
+
+#content {
+  margin: 8px auto;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  height: 100px;
+}
+
+#right-suggestion{
+  width: 30%;
+  border: 1px solid #E5E5E5;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  height: 100px;
+  margin: 10px;
+}
+
+.profile-info {
+  margin: 2px auto;
+  text-align: center;
+}
+
+.profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-name input {
+  border: none;
+  font-size: 20px;
+  padding: 5px 20px;
+  background-color: white;
+}
+
+.profile-name input:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.profile-title {
+  font-size: 14px;
+  color: #707070;
+}  */
+
+/* .profile-info {
+  flex: 1;
+} */
+
+/* .profile-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.profile-title {
+  font-size: 14px;
+  color: #707070;
+  margin-bottom: 10px;
+}
+
+.profile-connections {
+  font-size: 14px;
+  color: #0077B5;
+} */
+
+
+
+/* Styling for LinkedIn-style post content
+#content .post {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.post-profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.post-author-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.post-author-title {
+  font-size: 14px;
+  color: #707070;
+}
+
+.post-content {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.post-actions {
+  margin-top: 15px;
+}
+
+.post-actions button {
+  border: none;
+  background-color: transparent;
+  color: #0077B5;
+  font-size: 14px;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.post-actions button:hover {
+  text-decoration: underline;
+} */
+
+
+
+/* Styling for People You May Know section
+#right-suggestion {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+.suggested-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.suggested-profile-image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+}
+
+.suggested-profile-info {
+  flex-grow: 1;
+}
+
+.suggested-profile-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.suggested-profile-title {
+  font-size: 14px;
+  color: #707070;
+}
+
+.add-connection-button {
+  border: none;
+  background-color: #0077B5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.add-connection-button:hover {
+  background-color: #005E91;
+} */
+
+
+
+/* Styling for Comment Box */
+/* .post-comments {
+  margin-top: 20px;
+  border-top: 1px solid #E5E5E5;
+  padding-top: 15px;
+}
+
+.comment {
+  display: flex;
+  margin-top: 15px;
+}
+
+.commenter-profile-image {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.comment-content {
+  flex-grow: 1;
+}
+
+.commenter-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.comment-text {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.comment-input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #E5E5E5;
+  border-radius: 5px;
+}
+
+.comment-button {
+  border: none;
+  background-color: #0077B5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.comment-button:hover {
+  background-color: #005E91;
+}
+
+
+
+
+Styling for Patient Post
+.patient-info {
+  margin-top: 10px;
+  border-top: 1px solid #E5E5E5;
+  padding-top: 10px;
+}
+
+.patient-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.patient-symptoms {
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+
+.contact-patient-button {
+  border: none;
+  background-color: #0077B5;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.contact-patient-button:hover {
+  background-color: #005E91;
+}
+ */

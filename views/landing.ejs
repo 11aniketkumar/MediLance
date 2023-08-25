@@ -3,35 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
+    <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Home.css">
+    <link rel="stylesheet" href="index.css"> 
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <a href="#" class="navbar-logo">MediLance</a>
-            <ul>
-                <li> <a href="#">HOME</a></li>
-                <li> <a href="#">ABOUT</a></li>
-                <li> <a href="#">SERVICES</a></li>
-                <li> <a href="#">TEAM</a></li>
-                <li> <a href="#">CONTACT</a></li>
-                <li> <a href="#">FAQ</a></li>
-                <form action="/login_registration" method="get">
-                    <li><button class="btn-sign-in">SIGN IN</button></li>
-                </form>
-            </ul>
-        </nav>
-
+    <div class="navbar">
+        <div class="logo">MediLance</div>
+        <ul class="nav-links">
+            <li><a href="./Home.html">HOME</a></li>
+            <li><a href="./about.html">ABOUT</a></li>
+            <li><a href="./services.html">SERVICES</a></li>
+            <li><a href="./team.html">TEAM</a></li>
+            <li><a href="./contact.html">CONTACT US</a></li>
+            <li><a href="./faq.html">FAQ</a></li>
+            <li><a href="/login_registration" class="sign-in-btn">SIGN IN</a></li>
+        </ul>
+    </div>
+    <div class="content-main">
         <div class="content">
-            <h1 class="content-h1"> Shaping Medical Futures Together</h1><br>
-            <h2>Doctors with Expertise. Patients with Dreams. We Unite Them.</h2><br>
-            <form action="/login_registration" method="get">
-                <button class="btn-join-us"> JOIN US </button>
-            </form>
+            <h1> Shaping Medical Futures Together</h1>
+            <h4>Doctors with Expertise.Patients with Dreams.We Unite Them</h4>
+            <a class="join-btn" href="/login_registration">JOIN US</a>
+        </div>
+    </div>
+    <div class="waveWrapper waveAnimation">
+        <div class="waveWrapperInner bgTop">
+          <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgMiddle">
+          <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+        </div>
+        <div class="waveWrapperInner bgBottom">
+          <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
         </div>
     </div>
 </body>

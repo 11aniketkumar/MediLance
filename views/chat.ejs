@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="http://localhost:5000/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+    <style>
+        #message-container {
+            max-width: 570px; /* Adjusted max-width */
+            min-height: 400px;
+            border: 1px solid #e1e5ea;
+            background-color: #f3f4f6;
+            margin: 20px auto;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: 1px solid black;
+        }
+
+        #message-container div{
+            border: 1px solid black;
+            padding: 10px;
+            margin: 10px;
+            background-color: #7294b5;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        #below {
+            width: 570px;
+            margin: 10px auto;
+        }
+    
+        #message-input {
+            height: 12px;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px;
+            width: 70%;
+            background-color: white;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+        }
+    
+        #send-button {
+            background-color: #0a66c2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 8px 16px;
+            cursor: pointer;
+            margin: 10px;
+        }
+    </style> 
+</head>
+<body>
+    <div id="message-container"></div>
+    <div id="below">
+        <form>
+            <input type="text" id="message-input">
+            <button type="submit" id="send-button">Send</button>
+        </form>
+    </div>
+</body>
+</html>
