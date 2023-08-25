@@ -22,3 +22,14 @@ export const getUserAccount = async(req,res)=>{
         res.send("Invalid Input");
     }
 }
+
+
+export const isLoggedIn = (req, res, next) =>{
+    const { token } = req.cookies;
+
+    if(token) {
+        next();
+    } else {
+        res.redirect("/login_registration");
+    }
+}

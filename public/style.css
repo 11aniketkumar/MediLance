@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Slab&family=Ubuntu&display=swap');
 body {
-  margin: 0px;
+  margin: 0;
   font-family: Arial, sans-serif;
 }
 
@@ -32,20 +32,14 @@ body {
   outline: none;
 }
 
-.navbar ul {
-  text-decoration: none;
-  display: flex;
-  list-style: none;
-  margin: 0px;
-}
-
-.navbar li {
+.navbar a {
   color: white;
   text-align: center;
+  text-decoration: none;
   padding: 10px 15px;
 }
 
-.navbar li:hover {
+.navbar a:hover {
   background-color: #005E91;
   border-radius: 4px;
 }
@@ -56,6 +50,7 @@ body {
 }
 
 .nav-right{
+  margin-top: 6px;
   float: right;
 }
 

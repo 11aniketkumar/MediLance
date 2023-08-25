@@ -8,11 +8,14 @@ router.get("/users", async(req,res)=>{
     res.json(data);
 });
 
-// router.get('/user/:userId', async (req, res) => {
-//     const userId = req.params.userId;
+router.get("/signout", (req, res)=>{
+    const { token } = req.cookies;
 
-//     const userDetails = await user.findById(userId);
-//     res.json(userDetails);
-// });
+    res.cookie("token", null, {
+        httpOnly: true,
+        expires: new Date(Date.now())
+    });
+    res.redirect("/");
+})
 
 export default router;

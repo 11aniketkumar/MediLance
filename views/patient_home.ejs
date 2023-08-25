@@ -13,19 +13,17 @@
 
 <div class="navbar">
   <span class="nav-left">
-    <a href="#" class="navbar-logo">Logo</a>
+    <a href="#" class="navbar-logo">MediLance</a>
     <input type="text" placeholder="Search" class="navbar-search">
   </span>
   <span class="nav-right">
-    <ul>
-      <li>Home</li>
-      <li>Patients</li>
-      <li>Appointments</li>
-      <li>Messaging</li>
-      <li>Notifications</li>
-      <li>Sign Out</li>
-    </ul>
-  </span>
+    <a href="#">Home</a>
+    <a href="/patient/patient_doctors">Doctors</a>
+    <a href="/">Appointments</a>
+    <a href="/">Messaging</a>
+    <a href="/">Notifications</a>
+    <a href="/">Sign Out</a>
+</span>
 </div>
 <div id="container">
   <div class="profile-card">
@@ -38,25 +36,17 @@
     </div>
   </div>
   <div id="centre-content">
-    <div id="content">
-      <!-- <div class="post">
-        <div class="post-header">
-          <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="post-profile-image">
-          <div class="post-author">
-            <span class="post-author-name">RISHABH KUMAR</span>
-            <span class="post-author-title">Data Analyst</span>
-          </div>
-        </div>
-        <p class="post-content">
-          Excited to share my latest data analysis project! 📊📈 I've been diving deep into a large dataset and uncovered some fascinating insights about customer behavior. It's amazing how data can unveil hidden patterns and drive informed decisions. Big shoutout to my incredible team for their support throughout this journey. Looking forward to more exciting projects ahead! 👨‍💻🚀 #DataAnalysis #Analytics #Teamwork
-        </p>
-        <div class="post-actions">
-          <button class="post-like">Like</button>
-          <button class="post-comment">Comment</button>
-          <button class="post-share">Share</button>
-        </div>
-      </div> -->
+    <div id="create_post">
+      <div class="left">
+        <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
+      </div>
+      <div class="right">
+        <form action="/patient/post" method="get">
+          <input type="submit" value="Consult a doctor...">
+        </form>
+      </div>
     </div>
+    <div id="content"></div>
   </div>
   <div id="right-suggestion">
     <div class="suggested-profile">

@@ -18,7 +18,7 @@
   </span>
   <span class="nav-right">
       <a href="/">Home</a>
-      <a href="/">Patients</a>
+      <a href="#">Doctors</a>
       <a href="/">Appointments</a>
       <a href="/">Messaging</a>
       <a href="/">Notifications</a>
@@ -36,16 +36,6 @@
     </div>
   </div>
   <div id="centre-content">
-    <div id="create_post">
-      <div class="left">
-        <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
-      </div>
-      <div class="right">
-        <form action="/doctor/post" method="get">
-          <input type="submit" value="Start a Post...">
-        </form>
-      </div>
-    </div>
     <div id="content"></div>
   </div>
   <div id="right-suggestion">
@@ -67,7 +57,7 @@
   const postsContainer = document.getElementById('content');
 
   // Fetch posts from the backend API
-  fetch('/doctor/posts')
+  fetch('/doctor/allDoctors')
       .then(response => response.json())
       .then(posts => {
           posts.forEach(post => {
@@ -77,15 +67,13 @@
               postElement.innerHTML = `<div class="post-header">
                   <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="post-profile-image">
                   <div class="post-author">
-                    <span class="post-author-name">${post.userId.details.name}</span>
-                    <span class="post-author-title">${post.userId.email}</span>
+                    <span class="post-author-name">${post.details.name}</span>
+                    <span class="post-author-title">${post.email}</span>
                   </div>
                 </div>
-                <p class="post-content">${post.content}</p>
                 <div class="post-actions">
-                  <button class="post-like">Like</button>
-                  <button class="post-comment">Comment</button>
-                  <button class="post-share">Share</button>
+                  <button class="post-like">Book Appointment</button>
+                  <button class="post-comment">Contact</button>
                 </div>
               `;
               postsContainer.appendChild(postElement);

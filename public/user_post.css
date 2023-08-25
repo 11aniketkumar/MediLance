@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+body{
+    background-color: rgb(240, 240, 240);
+    padding-top: 20px ;
+    font-family: 'poppins', sans-serif;
+}
+.contain{
+    height: 420px;
+    width: 600px;
+    margin: auto;
+    background-color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    box-shadow: 6px 6px 10px -3px rgb(0, 0, 0,0.25);
+}
+.prof{
+    display:flex;
+}
+img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.info{
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-bottom: 6px;
+}
+.name{
+    font-weight: bold;
+}
+
+textarea{
+    height: 230px;
+    width: 550px;
+    padding-top: 5px;
+    resize: none;
+    border: transparent;
+    font-size: large;
+    background-color: white;
+}
+.but11{
+    display: inline;
+    margin: 7px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(224, 224, 224);
+
+}
+.but11:hover{
+    background-color:rgb(186, 184, 184) ;
+}
+.butt11{
+    padding-left: 470px;
+}
+
+.but12{
+    height: 30px;
+    width: 30px;
+    border: none;
+    margin-right: 15px;
+    border-radius: 50%;
+    background-color: rgb(224, 224, 224);
+}
+.but12:hover{
+    background-color:rgb(186, 184, 184) ;   
+}
+.but13{
+    height: 30px;
+    width: 60px;
+    padding: auto;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    background-color: #0077d5;
+}
+.but13:hover{
+    background-color: #005a8c;
+}
+#line{
+    margin-right: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 10px;
+}
+

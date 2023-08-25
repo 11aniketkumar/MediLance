@@ -12,7 +12,7 @@ export const savePost = async(req,res)=>{
         content
     });
 
-    res.send("success");
+    res.redirect("/doctor/home");
 };
 
 export const getAllPosts = async (req, res) => {
