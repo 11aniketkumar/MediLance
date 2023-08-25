@@ -7,6 +7,10 @@
     <script defer src="http://localhost:5000/socket.io/socket.io.js"></script>
     <script defer src="/script.js"></script>
     <style>
+        h1 {
+            text-align: center;
+        }
+        
         #message-container {
             max-width: 570px; /* Adjusted max-width */
             min-height: 400px;
@@ -54,9 +58,10 @@
     </style> 
 </head>
 <body>
+    <h1>Chat Menu</h1>
     <div id="message-container"></div>
     <div id="below">
-        <form>
+        <form id="send-container">
             <input type="text" id="message-input">
             <button type="submit" id="send-button">Send</button>
         </form>
