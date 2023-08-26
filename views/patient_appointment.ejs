@@ -17,7 +17,7 @@
     <input type="text" placeholder="Search" class="navbar-search">
   </span>
   <span class="nav-right">
-    <a href="#">Home</a>
+    <a href="/patient/home">Home</a>
     <a href="/patient/patient_doctors">Doctors</a>
     <a href="/patient/appointment">Appointments</a>
     <a href="/chat">Messaging</a>
@@ -36,16 +36,6 @@
     </div>
   </div>
   <div id="centre-content">
-    <div id="create_post">
-      <div class="left">
-        <img src="/img/Formal-profile-pic.jpg" alt="Profile Picture" class="profile-image">
-      </div>
-      <div class="right">
-        <form action="/patient/post" method="get">
-          <input type="submit" value="Consult a doctor...">
-        </form>
-      </div>
-    </div>
     <div id="content"></div>
   </div>
   <div id="right-suggestion">
@@ -64,35 +54,27 @@
 
 </body>
 <script>
-  const postsContainer = document.getElementById('content');
+  const appointmentsContainer = document.getElementById('content');
 
-  // Fetch posts from the backend API
-  fetch('/doctor/posts')
+  // Fetch appointments from the backend API
+  fetch('/getPatientAppointments')
       .then(response => response.json())
-      .then(posts => {
-          posts.forEach(post => {
-              // Create and append a post element
-              const postElement = document.createElement('div');
-              postElement.classList.add('post');
-              postElement.innerHTML = `<div class="post-header">
-                  <img src="/img/doctor.png" alt="Profile Picture" class="post-profile-image">
-                  <div class="post-author">
-                    <span class="post-author-name">${post.userId.details.name}</span>
-                    <span class="post-author-title">${post.userId.email}</span>
-                  </div>
-                </div>
-                <p class="post-content">${post.content}</p>
-                <div class="post-actions">
-                  <button class="post-like">Like</button>
-                  <button class="post-comment">Comment</button>
-                  <button class="post-share">Share</button>
-                </div>
+      .then(appointments => {
+          appointments.forEach(appointment => {
+              // Create and append an appointment element
+              const appointmentElement = document.createElement('div');
+              appointmentElement.classList.add('post');
+              appointmentElement.innerHTML = `
+                  <p><strong>Doctor: </strong> ${appointment.doctor.details.name}</p>
+                  <p><strong>Date,Time: </strong> ${new Date(appointment.timeStamp).toLocaleString()}</p>
+                  <p><strong>Status: </strong> ${appointment.status}</p>
+                  <p><strong>Content: </strong> ${appointment.content}</p>
               `;
-              postsContainer.appendChild(postElement);
+              appointmentsContainer.appendChild(appointmentElement);
           });
       })
       .catch(error => {
-          console.error('Error fetching posts:', error);
+          console.error('Error fetching appointments:', error);
       });
 </script>
 </html>

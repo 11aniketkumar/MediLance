@@ -65,5 +65,16 @@ router.get("/profile", async(req,res)=>{
     res.render("doctor_profile", { name, email, phone, dob, specilization:"Doctor" });
 });
 
+router.get("/appointment", isLoggedIn, async(req,res)=>{
+    const { token } = req.cookies;
+
+    const data = await user.findOne({ _id: token }).populate({
+                                                        path: 'details',
+                                                        model: 'Doctor'
+                                                        });
+    const name = data.details.name;
+    res.render("doctor_appointment", { name, specilization:"User" });
+});
+
 export default router;
 

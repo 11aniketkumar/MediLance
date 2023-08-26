@@ -18,10 +18,6 @@ router.get("/signout", (req, res)=>{
     res.redirect("/");
 });
 
-router.get("/addAppointment", (req,res)=>{
-    res.render("appointment");
-});
-
 router.get("/chat", (req, res)=>{
     res.render("chat");
 })

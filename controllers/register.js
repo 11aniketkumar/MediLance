@@ -39,7 +39,7 @@ export const saveUserAccount = async(req,res)=>{
         });
     }
 
-    user.create({
+    await user.create({
         email,
         password,
         role,

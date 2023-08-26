@@ -6,6 +6,7 @@ import { checkPassword, isRegistered, saveUserAccount } from './controllers/regi
 import userRouter from './routes/user.js';
 import doctorRouter from './routes/doctor.js';
 import patientRouter from './routes/patient.js';
+import appointmentRouter from './routes/appointment.js';
 import { getUserAccount } from './controllers/login.js';
 
 import http from 'http';
@@ -25,6 +26,7 @@ app.use(express.static(path.join(path.resolve(), "public")));
 app.use(express.urlencoded({ extended : true }));
 app.use(cookieParser());
 app.use(userRouter);
+app.use(appointmentRouter);
 app.use("/doctor",doctorRouter);
 app.use("/patient",patientRouter);
 

@@ -39,4 +39,16 @@ router.get("/post", isLoggedIn, (req,res)=>{
 
 router.post("/addPost", isLoggedIn, savePatientPost);
 
+router.get("/appointment", isLoggedIn, async(req,res)=>{
+    const { token } = req.cookies;
+
+    const data = await user.findOne({ _id: token }).populate({
+                                                        path: 'details',
+                                                        model: 'Patient'
+                                                        });
+    const name = data.details.name;
+    res.render("patient_appointment", { name, specilization:"User" });
+});
+
+
 export default router;

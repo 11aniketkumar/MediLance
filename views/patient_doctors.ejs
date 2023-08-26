@@ -19,7 +19,7 @@
   <span class="nav-right">
       <a href="/patient/home">Home</a>
       <a href="#">Doctors</a>
-      <a href="/addAppointment">Appointments</a>
+      <a href="/patient/appointment">Appointments</a>
       <a href="/chat">Messaging</a>
       <a href="/">Notifications</a>
       <a href="/signout">Sign Out</a>
@@ -72,7 +72,8 @@
                   </div>
                 </div>
                 <div class="post-actions">
-                <form action="/addAppointment" method="get">
+                <form action="/addAppointment" method="post">
+                  <input type="text" name="doctor" value="${post._id}" hidden>
                   <button class="post-like">Book Appointment</button>
                 </form>
                   <button class="post-comment">Contact</button>
