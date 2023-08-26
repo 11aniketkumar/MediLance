@@ -19,25 +19,25 @@
     <div class="content">
         <div class="input-box">
             <label for="name">Name</label>
-            <input type="text" placeholder="Enter your full name" name="name">
+            <input type="text" placeholder="Enter your full name" name="name" value="<%=name%>">
         </div>
         <div class="input-box">
             <div class="contact-input">
                 <label for="Phno">Phone No.</label>
-                <input type="text" placeholder="Enter Your Phone No." name="Phno">
+                <input type="text" placeholder="Enter Your Phone No." name="Phno"  value="<%=phone%>">
             </div>
             <div class="contact-input">
                 <label for="Email">Email</label>
-                <input type="email" placeholder="Enter Your E-Mail" name="Email">
+                <input type="email" placeholder="Enter Your E-Mail" name="Email" value="<%=email%>">
             </div>
+        </div>
+        <div class="input-box">
+            <label for="dob">Date Of Birth</label>
+            <input type="date" name="dob"  value="<%=dob%>">
         </div>
         <div class="input-box">
             <label for="address">Address</label>
             <textarea name="address" cols="60" rows="3" placeholder="Enter your address"></textarea>
-        </div>
-        <div class="input-box">
-            <label for="dob">Date Of Birth</label>
-            <input type="date" name="dob">
         </div>
         <div class="button">
             <button class="submit">Save</button>

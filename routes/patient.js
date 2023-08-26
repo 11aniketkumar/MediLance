@@ -17,8 +17,23 @@ router.get("/home", isLoggedIn, async(req,res)=>{
     res.render("patient_home", { name, specilization:"User" });
 });
 
-router.get("/profile", isLoggedIn, (req,res)=>{
-    res.render("patient_profile");
+router.get("/profile", async(req,res)=>{
+    const { token } = req.cookies;
+
+    const data = await user.findOne({ _id: token }).populate({
+                                                        path: 'details',
+                                                        model: 'Patient'
+                                                        });
+    const email = data.email;
+    const name = data.details.name;
+    const phone = data.details.phone;
+    const raw_dob = data.details.dob;
+
+    const dobISO = raw_dob.toISOString(); // Convert to ISO 8601 string format
+    const dob = dobISO.split("T")[0];
+
+
+    res.render("patient_profile", { name, email, phone, dob, specilization:"User" });
 });
 
 router.get("/patient_doctors", isLoggedIn, async(req,res)=>{
