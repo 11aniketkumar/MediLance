@@ -14,7 +14,6 @@
 </head>
 
 <body>
-
   <div class="navbar">
     <span class="nav-left">
       <a href="#" class="navbar-logo">MediLance</a>
@@ -33,21 +32,20 @@
   </div>
   <div id="container">
     <div class="appointment">
-      <h1 class="appointment-heading">Book Your Appointment</h1>
-      <div>Which day would you prefer for appointment?<div><input type="date" name="appointment-date"
-        id="appointment-date"></div></div>
-        <form action="patient/Patient_doctors" method="get">
-      <div> What time would you prefer for appointment?<div><input type="time" name="appointment-time"
-        id="appointment-time"></div></div>
-      <p>  Health Issues:
-        <textarea name="post" placeholder="What's causing you problem?"></textarea>
-      </p>
-      <button class="confirm-appointment-btn">Confirm Appointment</button>
+      <form action="patient/Patient_doctors" method="get"></form>
+        <h1 class="appointment-heading">Book Your Appointment</h1>
+        <div>Which day would you prefer for appointment?<div>
+          <input type="date" name="appointment-date" id="appointment-date"></div>
+        </div>
+          <div> What time would you prefer for appointment?<div>
+            <input type="time" name="appointment-time" id="appointment-time"></div>
+          </div>
+            <p>  Health Issues:
+              <textarea name="post" placeholder="What's causing you problem?"></textarea>
+            </p>
+            <button class="confirm-appointment-btn">Confirm Appointment</button>
       </form>
     </div>
   </div>
-      
-        
 </body>
-
 </html>

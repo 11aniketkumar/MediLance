@@ -16,38 +16,38 @@
                 <div class="content1">
                     <div class="input-box">
                         <label for="name">Name</label>
-                        <input type="text" placeholder="Enter your full name" name="name">
+                        <input type="text" placeholder="Enter your full name" name="name" value="<%=name%>">
                     </div>
                     <div class="input-box">
                         <label for="email">Email</label>
-                        <input type="email" placeholder="Enter your email" name="email">
+                        <input type="email" placeholder="Enter your email" name="email" value="<%=email%>">
                     </div>
                     <div class="input-box">
                         <label for="phno">Phone Number</label>
-                        <input type="text" placeholder="Enter your phone number" name="phno">
+                        <input type="text" placeholder="Enter your phone number" name="phno" value="<%=phone%>">
+                    </div>
+                    <div class="input-box">
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name="dob" value="<%=dob%>">
                     </div>
                     <div class="input-box">
                         <label for="address">Address</label>
                         <textarea name="address" cols="30" rows="3" placeholder="Enter your address"></textarea>
-                    </div>
-                    <div class="input-box">
-                        <label for="dob">Date of Birth</label>
-                        <input type="date" name="dob">
                     </div>
                 </div>
             </form>
             <div class="boxx1">
                 <div class="boxx2">
                     <div class="boxx3">
-                        <div class="pic"><img src="/img/Formal-profile-pic.jpg" alt="Suggested Profile 1" class="suggested-profile-image"> </div>
+                        <div class="pic"><img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image"> </div>
                         <div class="info">
-                            <div class="name">RISHABH KUMAR</div>
-                            <div class="title">Data Scientist</div>
+                            <div class="name"><%=name%></div>
+                            <div class="title"><%=specilization%></div>
                         </div>
                     </div>
                 </div>
-                <button class="but13">Book Appointment</button>
-                <button class="but13">Chat with doctor</button>
+                <button class="but13">Upload Photo</button>
+                <button class="but13">Save</button>
             </div>
         </div>
 

@@ -46,8 +46,23 @@ router.get("/patient_posts", getAllPatientPosts);
 // api used by patient_doctor page
 router.get("/allDoctors", getAllDoctors);
 
-router.get("/profile", (req,res)=>{
-    res.render("doctor_profile");
+router.get("/profile", async(req,res)=>{
+    const { token } = req.cookies;
+
+    const data = await user.findOne({ _id: token }).populate({
+                                                        path: 'details',
+                                                        model: 'Doctor'
+                                                        });
+    const email = data.email;
+    const name = data.details.name;
+    const phone = data.details.phone;
+    const raw_dob = data.details.dob;
+
+    const dobISO = raw_dob.toISOString(); // Convert to ISO 8601 string format
+    const dob = dobISO.split("T")[0];
+
+
+    res.render("doctor_profile", { name, email, phone, dob, specilization:"Doctor" });
 });
 
 export default router;
