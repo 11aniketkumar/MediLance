@@ -5,26 +5,38 @@ import { appointment } from "../models/appointment.js";
 const router = express.Router();
 
 router.post("/addAppointment", (req,res)=>{
+    const patient_id = req.cookies.token;
     const doctor_id = req.body.doctor;
 
-    res.render("appointment", { doctor:doctor_id });
+    res.render("appointment", { patient:patient_id, doctor:doctor_id, direction: "patient"});
+});
+
+router.post("/setAppointment", (req,res)=>{
+    const doctor_id = req.cookies.token;
+    const patient_id = req.body.patient;
+
+    res.render("appointment", { patient:patient_id, doctor:doctor_id, direction: "doctor"});
 });
 
 
 router.post("/saveAppointment", async (req, res) => {
-    const { token } = req.cookies;
-    const { doctor, appointment_date, appointment_time, post } = req.body;
+    const { doctor, patient, appointment_date, appointment_time, post, direction } = req.body;
     const combinedDateTime = `${appointment_date}T${appointment_time}:00Z`;
     const appointmentDateTime = new Date(combinedDateTime);
 
     await appointment.create({
         doctor: doctor,
-        patient: token,
+        patient: patient,
         content: post,
         status: "Pending",
         timeStamp: appointmentDateTime
     });
-    res.redirect("/patient/patient_doctors");
+
+    if(direction === "patient") {
+        res.redirect("/patient/patient_doctors");
+    } else {
+        res.redirect("doctor/patient");
+    }
 });
 
 router.get("/getDoctorAppointments", async (req, res) => {

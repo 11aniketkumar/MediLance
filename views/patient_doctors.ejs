@@ -42,8 +42,24 @@
     <div class="suggested-profile">
       <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
       <div class="suggested-profile-info">
-        <div class="suggested-profile-name">Samantha Smith</div>
-        <div class="suggested-profile-title">Marketing Manager</div>
+        <div class="suggested-profile-name">Dr.Samantha Smith</div>
+        <div class="suggested-profile-title">ENT Specialist</div>
+      </div>
+      <button class="add-connection-button">Connect</button>
+    </div>
+    <div class="suggested-profile">
+      <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
+      <div class="suggested-profile-info">
+        <div class="suggested-profile-name">Dr.Alok Ray</div>
+        <div class="suggested-profile-title">Eye Specialist</div>
+      </div>
+      <button class="add-connection-button">Connect</button>
+    </div>
+    <div class="suggested-profile">
+      <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
+      <div class="suggested-profile-info">
+        <div class="suggested-profile-name">Dr.Dinesh Chowdhary</div>
+        <div class="suggested-profile-title">Neuro surgeon</div>
       </div>
       <button class="add-connection-button">Connect</button>
     </div>
@@ -75,8 +91,8 @@
                 <form action="/addAppointment" method="post">
                   <input type="text" name="doctor" value="${post._id}" hidden>
                   <button class="post-like">Book Appointment</button>
-                </form>
                   <button class="post-comment">Contact</button>
+                </form>
                 </div>
               `;
               postsContainer.appendChild(postElement);

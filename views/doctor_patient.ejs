@@ -42,8 +42,24 @@
     <div class="suggested-profile">
       <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
       <div class="suggested-profile-info">
-        <div class="suggested-profile-name">Samantha Smith</div>
-        <div class="suggested-profile-title">Marketing Manager</div>
+        <div class="suggested-profile-name">Dr.Samantha Smith</div>
+        <div class="suggested-profile-title">ENT Specialist</div>
+      </div>
+      <button class="add-connection-button">Connect</button>
+    </div>
+    <div class="suggested-profile">
+      <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
+      <div class="suggested-profile-info">
+        <div class="suggested-profile-name">Dr.Alok Ray</div>
+        <div class="suggested-profile-title">Eye Specialist</div>
+      </div>
+      <button class="add-connection-button">Connect</button>
+    </div>
+    <div class="suggested-profile">
+      <img src="/img/doctor.png" alt="Suggested Profile 1" class="suggested-profile-image">
+      <div class="suggested-profile-info">
+        <div class="suggested-profile-name">Dr.Dinesh Chowdhary</div>
+        <div class="suggested-profile-title">Neuro surgeon</div>
       </div>
       <button class="add-connection-button">Connect</button>
     </div>
@@ -72,10 +88,11 @@
                   </div>
                 </div>
                 <p class="post-content">${post.content}</p>
-                <div class="patient-post">
-                  <a href="/appointment" class="contact-patient-button">Set Appointment</a>
-                  <a href="/appointment" class="contact-patient-button">Contact Now</a>
-                </div>
+                <form action="/setAppointment" method="post">
+                  <input type="text" name="patient" value="${post.userId._id}" hidden>
+                  <button class="contact-patient-button">Book Appointment</button>
+                  <button class="contact-patient-button">Contact</button>
+                </form>
               `;
               postsContainer.appendChild(postElement);
           });
