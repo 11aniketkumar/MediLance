@@ -416,6 +416,11 @@ body {
   margin-top: 5px;
 }
 
+.patient-post a {
+  text-decoration: none;
+  margin-right: 20px;
+}
+
 .contact-patient-button {
   border: none;
   background-color: #0077B5;
@@ -430,5 +435,4 @@ body {
 .contact-patient-button:hover {
   background-color: #005E91;
 }
-
 
