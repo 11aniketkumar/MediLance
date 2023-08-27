@@ -39,8 +39,4 @@ We welcome contributions to enhance the Locum Freelancing Platform. To contribut
 
 ## Acknowledgments
 
-This project was made possible by the dedication and innovation of our incredible team members: Amarnath, Sai Ram, Dakshith, Rishabh, and Binita.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+This project was made possible by the dedication and innovation of our incredible team members: Amarnath, Dakshith, Sai Ram, Rishabh, and Binita.
