@@ -59,8 +59,5 @@ This project was made possible by the dedication and innovation of our incredibl
 ### Find Doctor
 ![Find Doctor](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/find_doctor.png)
 
-### Post Doctor
+### Post
 ![Post Doctor](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/post_doc.png)
-
-### Post Patient
-![Post Patient](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/post_patient.png)
