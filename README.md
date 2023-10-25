@@ -45,7 +45,7 @@ This project was made possible by the dedication and innovation of our incredibl
 ## Screenshots
 
 ### Landing Page
-![Landing Page]([https://github.com/11aniketkumar/MediLance/raw/main/screenshot/landing_page.png])
+![Landing Page](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/landing_page.png)
 
 ### Chatroom
 ![Chatroom](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/chatroom.png)
