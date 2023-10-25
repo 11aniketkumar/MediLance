@@ -40,3 +40,23 @@ We welcome contributions to enhance the Locum Freelancing Platform. To contribut
 ## Acknowledgments
 
 This project was made possible by the dedication and innovation of our incredible team members: Amarnath, Dakshith, Sai Ram, Rishabh, and Binita.
+
+
+## Screenshots
+
+### Landing Page
+![Landing Page]([https://github.com/11aniketkumar/MediLance/raw/main/screenshot/landing_page.png])
+
+### Chatroom
+![Chatroom](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/chatroom.png)
+
+### Login
+![Login](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/login.png)
+
+### Project
+![Project](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/project.png)
+
+### Todo List
+![Todo List](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/todo%20list.png)
+
+#CodeWithFriends #tkinter #Python #mysql
