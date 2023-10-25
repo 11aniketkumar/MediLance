@@ -47,16 +47,20 @@ This project was made possible by the dedication and innovation of our incredibl
 ### Landing Page
 ![Landing Page](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/landing_page.png)
 
-### Chatroom
-![Chatroom](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/chatroom.png)
+### Appointment
+![Appointment](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/appointment.png)
 
-### Login
-![Login](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/login.png)
+### Book Appointment
+![Book Appointment](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/book_appointment.png)
 
-### Project
-![Project](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/project.png)
+### Doctor Profile
+![Doctor Profile](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/doctor_profile.png)
 
-### Todo List
-![Todo List](https://github.com/11aniketkumar/CodeWithFriends/raw/master/images/todo%20list.png)
+### Find Doctor
+![Find Doctor](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/find_doctor.png)
 
-#CodeWithFriends #tkinter #Python #mysql
+### Post Doctor
+![Post Doctor](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/post_doc.png)
+
+### Post Patient
+![Post Patient](https://github.com/11aniketkumar/MediLance/raw/main/screenshot/post_patient.png)
